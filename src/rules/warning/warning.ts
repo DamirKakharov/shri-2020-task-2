@@ -4,10 +4,14 @@ import { SIZES } from "../../constants";
 
 
 export const warning = (node: AstObject) => {
-  if (getBlockName(node) !== "warning") {
-    return;
-  }
+  const ERRORS: any = [];
+  getEntity(node, (e) => ERRORS.push(...(check(e)) || []), "warning");
 
+
+  return ERRORS || [];
+};
+
+export const check = (node: AstObject, ) => {
   const ERRORS: any = [];
   let state: any = { location: node.loc };
 
