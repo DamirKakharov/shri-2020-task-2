@@ -11,7 +11,7 @@ function parseJson(json: string): JsonAST {
 }
 
 
-globalObject.linter = (json: string) => {
+globalObject.lint = (json: string) => {
   let errors: any[] = [];
   const ast: JsonAST = parseJson(json);
 
