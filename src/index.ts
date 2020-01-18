@@ -31,8 +31,3 @@ globalObject.lint = (json: string) => {
   return errors;
 }
 
-
-globalObject.lint(
-
-
-)

@@ -40,9 +40,10 @@ const COMPARE_BLOCK = (node: AstObject, state?: any): void | object => {
   }
 
 
-  if (blockType == "offer" || blockType == "commercial") {
-    return
+  if (!(blockType === "offer" || blockType === "commercial")) {
+    return;
   }
+
 
   const halfGridPosition = state.mColums % 2 === 0 ? state.mColums / 2 : (state.mColums - 1) / 2;
   const { start, end } = node.loc;
