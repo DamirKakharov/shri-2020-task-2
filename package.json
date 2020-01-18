@@ -1,0 +1,30 @@
+{
+  "name": "linter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc test.ts",
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack -d --mode development",
+    "dev": "webpack-dev-server -d --mode development",
+    "build-prod": "webpack -p --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "json-to-ast": "^2.1.0"
+  }
+}
