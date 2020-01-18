@@ -22,7 +22,7 @@ globalObject.lint = (json: string) => {
       ...(warning(ast) || []),
       ...(header(ast) || []),
       ...grid(ast) || [],
-      ...reference(ast) || []
+      // ...reference(ast) || []
     ];
 
     errors = errors.filter(Boolean);
@@ -31,3 +31,8 @@ globalObject.lint = (json: string) => {
   return errors;
 }
 
+
+globalObject.lint(
+
+
+)
