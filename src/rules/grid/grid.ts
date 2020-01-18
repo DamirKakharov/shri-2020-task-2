@@ -51,8 +51,8 @@ const COMPARE_BLOCK = (node: AstObject, state?: any): void | object => {
       code: 'TEXT.TOO_MUCH_MARKETING_BLOCKS',
       error: 'Рекламный блок должен занимать не более половины ',
       location: {
-        start: { column: start.column, line: start.line, offset: start.offset },
-        end: { column: end.column, line: end.line, offset: end.offset }
+        start: { column: start.column, line: start.line },
+        end: { column: end.column, line: end.line }
       }
     };
   }

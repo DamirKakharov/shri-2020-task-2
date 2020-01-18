@@ -42,8 +42,8 @@ export const TEXT_SIZES_SHOULD_BE_EQUAL = (node: AstObject, state?: any): void |
       code: 'WARNING.TEXT_SIZES_SHOULD_BE_EQUAL',
       error: 'Тексты в блоке warning должны быть одного размера',
       location: {
-        start: { column: start.column, line: start.line, offset: start.offset },
-        end: { column: end.column, line: end.line, offset: end.offset }
+        start: { column: start.column, line: start.line },
+        end: { column: end.column, line: end.line }
       }
     };
   }
@@ -76,8 +76,8 @@ export const INVALID_BUTTON_SIZE = (node: AstObject, state?: any): void | object
       code: 'WARNING.INVALID_BUTTON_SIZE',
       error: 'Размер кнопки блока warning должен быть на 1 шаг больше эталонного',
       location: {
-        start: { column: start.column, line: start.line, offset: start.offset },
-        end: { column: end.column, line: end.line, offset: end.offset }
+        start: { column: start.column, line: start.line },
+        end: { column: end.column, line: end.line }
       }
     };
   }
@@ -96,8 +96,8 @@ export const INVALID_BUTTON_POSITION = (node: AstObject, state?: any): void | ob
       code: 'WARNING.INVALID_BUTTON_POSITION',
       error: 'Блок button в блоке warning не может находиться перед блоком placeholder на том же или более глубоком уровне вложенности',
       location: {
-        start: { column: start.column, line: start.line, offset: start.offset },
-        end: { column: end.column, line: end.line, offset: end.offset }
+        start: { column: start.column, line: start.line },
+        end: { column: end.column, line: end.line }
       }
     };
   }
@@ -129,8 +129,8 @@ export const INVALID_PLACEHOLDER_SIZE = (node: AstObject, state?: any): void | o
       code: 'WARNING.INVALID_PLACEHOLDER_SIZE',
       error: 'Допустимые размеры для блока placeholder в блоке warning: s, m, l',
       location: {
-        start: { column: start.column, line: start.line, offset: start.offset },
-        end: { column: end.column, line: end.line, offset: end.offset }
+        start: { column: start.column, line: start.line },
+        end: { column: end.column, line: end.line }
       }
     };
   }

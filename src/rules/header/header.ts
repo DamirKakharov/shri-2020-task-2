@@ -41,8 +41,8 @@ const SEVERAL_H1 = (node: AstObject, state?: any): void | object => {
       code: 'TEXT.SEVERAL_H1',
       error: 'Заголовок первого уровня на странице должен быть единственным',
       location: {
-        start: { column: start.column, line: start.line, offset: start.offset },
-        end: { column: end.column, line: end.line, offset: end.offset }
+        start: { column: start.column, line: start.line },
+        end: { column: end.column, line: end.line }
       }
     };
   }
@@ -80,8 +80,8 @@ const INVALID_H2_POSITION = (node: AstObject, state?: any): void | object => {
       code: 'TEXT.INVALID_H2_POSITION',
       error: 'Заголовок второго уровня не может находиться перед заголовком первого уровня',
       location: {
-        start: { column: start.column, line: start.line, offset: start.offset },
-        end: { column: end.column, line: end.line, offset: end.offset }
+        start: { column: start.column, line: start.line },
+        end: { column: end.column, line: end.line }
       }
     };
   }
@@ -118,8 +118,8 @@ const INVALID_H3_POSITION = (node: AstObject, state?: any): void | object => {
       code: 'TEXT.INVALID_H3_POSITION',
       error: 'Заголовок третьего уровня не может находиться перед заголовком второго уровня',
       location: {
-        start: { column: start.column, line: start.line, offset: start.offset },
-        end: { column: end.column, line: end.line, offset: end.offset }
+        start: { column: start.column, line: start.line },
+        end: { column: end.column, line: end.line }
       }
     };
   }
