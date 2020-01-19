@@ -95,7 +95,7 @@ export const INVALID_BUTTON_POSITION = (node: AstObject, state?: any): void | ob
   const { start, end } = node.loc;
   const placeholderLoc = state.placeholder.loc;
 
-  if (placeholderLoc.start.line >= start.line && placeholderLoc.start.column >= start.column) {
+  if (placeholderLoc.start.line > start.line) {
     return {
       code: 'WARNING.INVALID_BUTTON_POSITION',
       error: 'Блок button в блоке warning не может находиться перед блоком placeholder на том же или более глубоком уровне вложенности',
@@ -108,6 +108,7 @@ export const INVALID_BUTTON_POSITION = (node: AstObject, state?: any): void | ob
 };
 
 export const INVALID_PLACEHOLDER_SIZE = (node: AstObject, state?: any): void | object => {
+  state.placeholder = node;
   const { children } = node;
   const mods = children.find(child => child.key.value === 'mods');
 
