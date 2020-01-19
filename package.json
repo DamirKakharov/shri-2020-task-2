@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc test.ts",
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development",
     "dev": "webpack-dev-server -d --mode development",
